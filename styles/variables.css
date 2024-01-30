@@ -1,1 +1,33 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+
+:root {
+  /* TYPOGRAPHY */
+  --main-font: Inter-Variable;
+  --accent-font: PressStart2P;
+  --card-title-wght: 'wght' 700;
+  --card-text-wght: 'wght' 400;
+
+  /* COLORS */
+  --background-color: #FFFFFF;
+  --text-color: #000000;
+  --invert-color: #FFFFFF;
+
+  /* BACKGROUND */
+  --background-image:
+    repeating-linear-gradient(90deg, #d3d3d3, #d3d3d3 2px, transparent 2px, transparent 4px),
+    repeating-linear-gradient(#d3d3d3, #d3d3d3 2px, transparent 2px, transparent 4px),
+    linear-gradient(#e7e7e7 0.01%, #1a1a1a);
+
+  /* content-inline-size */
+  --content-inline-size: clamp(23.438rem, 16.285rem + 30.516vi, 43.75rem);
+
+  /* HEART ICON */
+  --heart-contour: #000;
+  --heart-fill: #FF0000;
+}
+
+@media (width <= 375px) {
+  :root {
+    --content-inline-size: 100vi;
+  }
+}
