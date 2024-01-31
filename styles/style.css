@@ -169,10 +169,6 @@
   position: relative;
 }
 
-.card__image {
-  display: block;
-}
-
 .card__image-watermark {
   position: absolute;
   top: 25px;
@@ -198,6 +194,7 @@
 }
 
 .card__image {
+  display: block;
   inline-size: 100%;
   aspect-ratio: 1/1;
   object-fit: cover;
@@ -331,6 +328,7 @@
 }
 
 .ok-button {
+  cursor: pointer;
   background-color: transparent;
   inline-size: 100%;
   padding: 7px 0;
@@ -436,6 +434,10 @@
 
 .bright-saturate {
   filter: brightness(0.8) saturate(10%);
+}
+
+.semi-transparent {
+  filter: opacity(75%);
 }
 
 /* ANIMATIONS */
