@@ -212,7 +212,7 @@
 .buttons-container {
   display: flex;
   justify-content: flex-end;
-  gap: 2px;
+  gap: 6px;
   padding: 0 26.5px 26.5px;
 }
 
@@ -221,6 +221,7 @@
   justify-content: center;
   align-items: center;
   block-size: 36px;
+  padding: 0;
   cursor: pointer;
   background-color: transparent;
   border: none;
@@ -254,7 +255,6 @@
 }
 
 .button:focus {
-  outline: 2px solid var(--text-color, #000);
   box-shadow: 3px 3px var(--text-color, #000);
 }
 
@@ -335,7 +335,7 @@
   cursor: pointer;
   background-color: transparent;
   inline-size: 100%;
-  padding: 7px 0;
+  padding: 10px 0;
 }
 
 .modal-window .save-icon {
