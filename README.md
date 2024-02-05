@@ -1,1 +1,0 @@
-https://github.com/yana-pavlova/zakrivayuschiy-teg-f.git
