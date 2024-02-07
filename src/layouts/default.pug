@@ -1,0 +1,31 @@
+doctype html
+html(lang="ru")
+    head
+        meta(charset="utf-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1")
+        meta(name="color-scheme", content="dark light")
+        title Закрывающий тег
+        link(rel="stylesheet", href="fonts/fonts.css")
+        link(rel="stylesheet", href="styles/variables.css")
+        link(rel="stylesheet", href="styles/globals.css")
+        link(rel="stylesheet", href="styles/style.css")
+        link(rel="stylesheet", href="styles/animations.css")
+        link(rel="stylesheet", href="styles/themes.css")
+        link(rel="icon", href="images/favicon.ico", sizes="any")
+        link(rel="icon", href="svg/icon.svg", type="image/svg+xml")
+        link(rel="apple-touch-icon", href="images/apple-touch-icon.png")
+        script(src="scripts/set-theme.js")
+    body.page
+        header.header.content-inline-size
+            div.header__heading-wrapper
+                a.header-logo &lt;/html&gt;
+                h1.header__heading закрывающий тег
+            nav.theme-menu.header__theme-menu
+                ul.theme-menu__list
+                    li.theme-menu__item
+                        button.theme-menu__button(type="button", data-theme="dark") Темно
+                    li.theme-menu__item
+                        button.theme-menu__button(type="button", data-theme="auto", disabled) Авто
+                    li.theme-menu__item
+                        button.theme-menu__button(type="button", data-theme="light") Светло
+        block content        

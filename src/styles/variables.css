@@ -24,6 +24,9 @@
   /* HEART ICON */
   --heart-contour: #000;
   --heart-fill: #FF0000;
+
+  /* IMAGE FILTER */
+  --filter: grayscale(100%);
 }
 
 @media (width <= 375px) {

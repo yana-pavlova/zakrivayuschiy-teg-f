@@ -199,6 +199,7 @@
   aspect-ratio: 1/1;
   object-fit: cover;
   object-position: center;
+  filter: var(--filter, grayscale(100%));
 }
 
 .card__text-container {
@@ -341,35 +342,6 @@
 .modal-window .save-icon {
   inline-size: 70px;
   block-size: 70px;
-}
-
-/* IMAGE FILTERS */
-.hue-rotate {
-  filter: hue-rotate(230deg);
-}
-
-.grayscale {
-  filter: grayscale(80%);
-}
-
-.contrast {
-  filter: contrast(70%);
-}
-
-.invert {
-  filter: invert(30%);
-}
-
-.sepia {
-  filter: sepia(100%);
-}
-
-.bright-saturate {
-  filter: brightness(0.8) saturate(10%);
-}
-
-.semi-transparent {
-  filter: opacity(75%);
 }
 
 /* MEDIA QUERIES */

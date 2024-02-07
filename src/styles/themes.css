@@ -25,6 +25,9 @@
 
 /* HEART ICON */
   --heart-contour: #00CC14;
+
+/* IMAGE FILTER */
+  --filter: grayscale(100%) brightness(80%) sepia(300%) hue-rotate(50deg) saturate(500%);
 }
 
 :root.theme-light {
@@ -48,6 +51,10 @@
 
 /* HEART ICON */
   --heart-contour: #000;
+
+/* IMAGE FILTER */
+  --filter: grayscale(100%);
+
 }
 
 @media (prefers-color-scheme: dark) {
@@ -70,6 +77,9 @@
     linear-gradient(#007f0c, #004306);
   /* HEART ICON */
   --heart-contour: #00CC14;
+
+  /* IMAGE FILTER */
+  --filter: grayscale(100%) brightness(80%) sepia(300%) hue-rotate(50deg) saturate(500%);
 
   }
   
@@ -96,6 +106,10 @@
 
   /* HEART ICON */
   --heart-contour: #000;
+
+  /* IMAGE FILTER */
+  --filter: grayscale(100%);
+
   }
 
 }

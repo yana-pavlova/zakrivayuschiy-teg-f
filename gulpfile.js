@@ -3,6 +3,7 @@ const concat = require('gulp-concat-css');
 const plumber = require('gulp-plumber');
 const del = require('del');
 const browserSync = require('browser-sync').create();
+const gulpPug = require('gulp-pug');
 
 function serve() {
   browserSync.init({
@@ -38,18 +39,28 @@ function scripts() {
   .pipe(browserSync.reload({stream: true}));
 }
 
+function pug() {
+  return gulp.src('src/pages/**/*.pug')
+        .pipe(gulpPug({
+          pretty: true
+        }))
+        .pipe(gulp.dest('dist/'))
+        .pipe(browserSync.reload({stream: true}));
+}
+
 function clean() {
   return del('dist');
 }
 
 function watchFiles() {
+  gulp.watch(['src/pages/**/*.pug'], pug);
   gulp.watch(['src/**/*.html'], html);
   gulp.watch(['src/blocks/**/*.css'], css);
   gulp.watch(['src/images/**/*.{jpg,png,svg,gif,ico,webp,avif}'], images);
   gulp.watch(['src/scripts/*.js'], html, scripts);
 }
 
-const build = gulp.series(clean, gulp.parallel(html, css, images, scripts));
+const build = gulp.series(clean, gulp.parallel(pug, css, images, scripts));
 const watchapp = gulp.parallel(build, watchFiles, serve);
 
 exports.html = html;
@@ -57,6 +68,7 @@ exports.css = css;
 exports.images = images;
 exports.clean = clean;
 exports.scripts = scripts;
+exports.pug = pug;
 
 exports.build = build;
 exports.watchapp = watchapp;
